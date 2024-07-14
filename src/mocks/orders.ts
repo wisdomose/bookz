@@ -1,0 +1,98 @@
+import { Order } from "@/types";
+import { books } from "./books";
+import { customer } from "./customer";
+
+export const orders: Order[] = [
+  {
+    id: 1,
+    customer: customer,
+    book: books[0],
+    orderDate: new Date("2023-07-01"),
+    status: "Pending",
+    totalQuantity: 2,
+    totalPrice: books[0].price * 2,
+  },
+  {
+    id: 2,
+    customer: customer,
+    book: books[1],
+    orderDate: new Date("2023-07-02"),
+    status: "Processing",
+    totalQuantity: 1,
+    totalPrice: books[1].price * 1,
+  },
+  {
+    id: 3,
+    customer: customer,
+    book: books[2],
+    orderDate: new Date("2023-07-03"),
+    status: "Shipped",
+    totalQuantity: 3,
+    totalPrice: books[2].price * 3,
+  },
+  {
+    id: 4,
+    customer: customer,
+    book: books[3],
+    orderDate: new Date("2023-07-04"),
+    status: "Delivered",
+    totalQuantity: 1,
+    totalPrice: books[3].price * 1,
+  },
+  {
+    id: 5,
+    customer: customer,
+    book: books[4],
+    orderDate: new Date("2023-07-05"),
+    status: "Cancelled",
+    totalQuantity: 1,
+    totalPrice: books[4].price * 1,
+  },
+  {
+    id: 6,
+    customer: customer,
+    book: books[5],
+    orderDate: new Date("2023-07-06"),
+    status: "Pending",
+    totalQuantity: 2,
+    totalPrice: books[5].price * 2,
+  },
+  {
+    id: 7,
+    customer: customer,
+    book: books[6],
+    orderDate: new Date("2023-07-07"),
+    status: "Processing",
+    totalQuantity: 1,
+    totalPrice: books[6].price * 1,
+  },
+  {
+    id: 8,
+    customer: customer,
+    book: books[7],
+    orderDate: new Date("2023-07-08"),
+    status: "Shipped",
+    totalQuantity: 4,
+    totalPrice: books[7].price * 4,
+  },
+  {
+    id: 9,
+    customer: customer,
+    book: books[8],
+    orderDate: new Date("2023-07-09"),
+    status: "Delivered",
+    totalQuantity: 1,
+    totalPrice: books[8].price * 1,
+  },
+  {
+    id: 10,
+    customer: customer,
+    book: books[9],
+    orderDate: new Date("2023-07-10"),
+    status: "Pending",
+    totalQuantity: 2,
+    totalPrice: books[9].price * 2,
+  },
+];
+
+console.log(orders);

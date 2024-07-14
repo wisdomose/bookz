@@ -1,0 +1,7 @@
+export enum COLLECTION {
+  USERS = "USERS",
+  BOOKS = "BOOKS",
+  CART = "CART",
+  ORDER = "ORDER",
+  TRANSACTIONS = "TRANSACTIONS",
+}
