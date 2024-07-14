@@ -13,6 +13,6 @@ export const customer: Customer = {
     city: "Anytown",
     state: "CA",
     country: "USA",
-    houseNo: 12,
+    houseNo: "12",
   },
 };
