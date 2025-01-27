@@ -16,22 +16,23 @@ export default function DashboardLayout({
   const router = useRouter();
   const setUser = useUserStore((state) => state.setUser);
 
-  useEffect(() => {
-    const auth = getAuth();
-    onAuthStateChanged(auth, async (user) => {
-      if (user) {
-        const userService = new UserService();
-        const profile = await userService.profile();
-        setUser(profile as unknown as User);
-        setLoaded(true);
-      } else router.replace("/");
-    });
-  }, []);
+  // useEffect(() => {
+  //   const auth = getAuth();
+  //   onAuthStateChanged(auth, async (user) => {
+  //     if (user) {
+  //       const userService = new UserService();
+  //       const profile = await userService.profile();
+  //       setUser(profile as unknown as User);
+  //       setLoaded(true);
+  //     } else router.replace("/");
+  //   });
+  // }, []);
 
-  if (loaded) return <>{children}</>;
-  return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center gap-5">
-      <Spinner />
-    </div>
-  );
+  return <>{children}</>;
+  // if (loaded) return <>{children}</>;
+  // return (
+  //   <div className="fixed inset-0 flex flex-col items-center justify-center gap-5">
+  //     <Spinner />
+  //   </div>
+  // );
 }

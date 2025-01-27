@@ -47,6 +47,9 @@ export default function Navbar() {
               <Link href="/upload">Upload</Link>
             </Button>
           )}
+           <Button asChild variant={"link"}>
+              <Link href="/request">Request</Link>
+            </Button>
           {!user && (
             <Button asChild variant={"link"}>
               <Link href="/login">Login</Link>
